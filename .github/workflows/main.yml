@@ -13,9 +13,9 @@ jobs:
       matrix:
           os: [ubuntu-20.04]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1.0.1-foxy
       - name: Setup ROS
-        uses: ros-tooling/setup-ros@foxy
+        uses: ros-tooling/setup-ros@v1.0.1-foxy
         with:
           required-ros-distributions: foxy
       - name: Install Iceoryx Dependencies
