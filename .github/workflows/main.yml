@@ -16,13 +16,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup ROS
-        uses: ros-tooling/setup-ros@master
+        uses: ros-tooling/setup-ros@foxy
         with:
           required-ros-distributions: foxy
       - name: Install Iceoryx Dependencies
         run: sudo apt-get update && sudo apt-get install -y cmake libacl1-dev libncurses5-dev pkg-config
       - name: Build & Test
-        uses: ros-tooling/action-ros-ci@master
+        uses: ros-tooling/action-ros-ci@foxy
         with:
           package-name: rmw_iceoryx_cpp iceoryx_ros2_bridge
           target-ros2-distro: foxy
