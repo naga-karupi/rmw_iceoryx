@@ -2,7 +2,8 @@ name: Integration build rmw_iceoryx
 
 on:
   push:
-    
+    branches:
+      - foxy
   pull_request:
 
 jobs:
@@ -13,15 +14,15 @@ jobs:
       matrix:
           os: [ubuntu-20.04]
     steps:
-      - uses: actions/checkout@v1.0.1-foxy
+      - uses: actions/checkout@v2
       - name: Setup ROS
-        uses: ros-tooling/setup-ros@v1.0.1-foxy
+        uses: ros-tooling/setup-ros@foxy
         with:
           required-ros-distributions: foxy
       - name: Install Iceoryx Dependencies
         run: sudo apt-get update && sudo apt-get install -y cmake libacl1-dev libncurses5-dev pkg-config
       - name: Build & Test
-        uses: ros-tooling/action-ros-ci@foxy
+        uses: ros-tooling/action-ros-ci@master
         with:
           package-name: rmw_iceoryx_cpp iceoryx_ros2_bridge
           target-ros2-distro: foxy
