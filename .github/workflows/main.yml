@@ -2,8 +2,7 @@ name: Integration build rmw_iceoryx
 
 on:
   push:
-    branches:
-      - foxy
+
   pull_request:
 
 jobs:
