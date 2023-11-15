@@ -1,7 +1,7 @@
 name: Integration build rmw_iceoryx
 
 on:
-  push:
+#  push:
 
   pull_request:
 

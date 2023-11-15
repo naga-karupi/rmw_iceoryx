@@ -1,5 +1,6 @@
 name: Lint rmw_iceoryx
 on:
+  push:
   pull_request:
 
 jobs:
