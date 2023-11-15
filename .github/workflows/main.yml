@@ -27,8 +27,8 @@ jobs:
           target-ros2-distro: foxy
           vcs-repo-file-url: |
             ./.github/workflows/additional_repos.repos
-      - name: Build & Test rmw_ros2_bridge
+      - name: Build & Test iceoryx_ros2_bridge
         uses: ros-tooling/action-ros-ci@master
         with:
-          package-name: rmw_ros2_bridge
+          package-name: iceoryx_ros2_bridge
           target-ros2-distro: foxy
